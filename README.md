@@ -1,0 +1,1 @@
+Simple FastAPI based mail sender api that would work both from your mailserver or could connect to any mailing api specified 

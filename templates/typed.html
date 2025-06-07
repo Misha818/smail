@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="{{ langPrefix }}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;padding:20px 0">
+    <tbody>
+        <tr>
+            <td align="center">
+
+
+                <table width="600" cellpadding="0" cellspacing="0" border="0"
+                    style="background-color:#fafafa;border-radius:16px;overflow:hidden">
+                    <tbody>
+                        <tr>
+                            <td align="center" style="padding:20px 0 10px">
+
+                                <a href="{{ main_url }}"
+                                    style="text-decoration:none;display:inline-block" target="_blank"
+                                >
+                                    <img src="{{ logo_url }}"
+                                        alt="Mammy's Bread" width="120"
+                                        style="display:block;border:none;outline:none;border-radius:50%"
+                                        data-bit="iit" jslog="138226; u014N:xr6bB; 53:WzAsMl0.">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0 30px 20px;border-bottom:1px solid #eceff3">
+
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="height:20px;line-height:20px;font-size:0">&nbsp;</td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="padding:0 30px">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center">
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div style="width:100%;box-sizing:border-box;height:100%;outline:none;overflow-y:auto;padding:12px 15px;text-align:left;white-space:pre-line!important;word-wrap:break-word">
+                                                    {{ data | safe }}
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="height:20px;line-height:20px;font-size:0">&nbsp;</td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="background-color:#fafafa;padding:20px 30px;border-top:1px solid #eceff3">
+
+
+                                <table style="background-color:#fafafa" width="100%" border="0" cellspacing="0"
+                                    cellpadding="0" align="center" bgcolor="#efefef">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <table align="center" width="650" border="0" cellspacing="0"
+                                                    cellpadding="0" style="width:650px;table-layout:fixed">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center" valign="top" style="padding:0 25px">
+                                                                <table width="100%" border="0" cellspacing="0"
+                                                                    cellpadding="0" align="center">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td height="40" style="height:40px">&nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center" valign="top">
+                                                                                <table border="0" cellspacing="0"
+                                                                                    cellpadding="0" align="center">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            {% if fb_icon %}
+                                                                                            <td width="30"
+                                                                                                style="width:30px"
+                                                                                                align="center"
+                                                                                                valign="middle">
+                                                                                                <a href="{{ fb_url }}" target="_blank" style="text-decoration:none">
+                                                                                                    <img src="{{ fb_icon }}"
+                                                                                                        width="30"
+                                                                                                        height="30"
+                                                                                                        alt="Fb"
+                                                                                                        border="0"
+                                                                                                        style="display:block;font-family:Arial,sans-serif;font-size:18px;line-height:25px;text-align:center;color:#000000;font-weight:bold;max-width:30px;margin:0px 3px"
+                                                                                                    >
+                                                                                                </a>
+                                                                                            </td>
+                                                                                            {% endif %}
+
+                                                                                            {% if insta_icon %}
+
+                                                                                            <td width="30"
+                                                                                                style="width:30px"
+                                                                                                align="center"
+                                                                                                valign="middle">
+                                                                                                <a href="{{ insta_url }}" target="_blank" style="text-decoration:none">
+                                                                                                    <img src="{{ insta_icon }}"
+                                                                                                        width="30"
+                                                                                                        height="30"
+                                                                                                        alt="In"
+                                                                                                        border="0"
+                                                                                                        style="display:block;font-family:Arial,sans-serif;font-size:18px;line-height:25px;text-align:center;color:#000000;font-weight:bold;max-width:30px;margin:0px 3px"
+                                                                                                    >
+                                                                                                </a>
+                                                                                            </td>                                                                                            {% endif %}
+
+                                                                                            {% if youtube_icon %}
+
+                                                                                            <td width="30"
+                                                                                                style="width:30px"
+                                                                                                align="center"
+                                                                                                valign="middle">
+                                                                                                <a href="{{ youtube_url }}" target="_blank" style="text-decoration:none">
+                                                                                                    <img src="{{ youtube_icon }}"
+                                                                                                        width="30"
+                                                                                                        height="30"
+                                                                                                        alt="Fb"
+                                                                                                        border="0"
+                                                                                                        style="display:block;font-family:Arial,sans-serif;font-size:18px;line-height:25px;text-align:center;color:#000000;font-weight:bold;max-width:30px;margin:0px 3px"
+                                                                                                    >
+                                                                                                </a>
+                                                                                            </td>                                                                                            {% endif %}
+
+                                                                                            {% if whatsapp_icon %}
+
+                                                                                            <td width="30"
+                                                                                                style="width:30px"
+                                                                                                align="center"
+                                                                                                valign="middle">
+                                                                                                <a href="{{ whatsapp_url }}" target="_blank" style="text-decoration:none">
+                                                                                                    <img src="{{ whatsapp_icon }}"
+                                                                                                        width="30"
+                                                                                                        height="30"
+                                                                                                        alt="Fb"
+                                                                                                        border="0"
+                                                                                                        style="display:block;font-family:Arial,sans-serif;font-size:18px;line-height:25px;text-align:center;color:#000000;font-weight:bold;max-width:30px;margin:0px 3px"
+                                                                                                    >
+                                                                                                </a>
+                                                                                            </td>
+                                                                                            {% endif %}
+
+                                                                                            {% if telegram_icon %}
+                                                                                            <td width="30"
+                                                                                                style="width:30px"
+                                                                                                align="center"
+                                                                                                valign="middle">
+                                                                                                <a href="{{ telegram_url }}" target="_blank" style="text-decoration:none">
+                                                                                                    <img src="{{ telegram_icon }}"
+                                                                                                        width="30"
+                                                                                                        height="30"
+                                                                                                        alt="Fb"
+                                                                                                        border="0"
+                                                                                                        style="display:block;font-family:Arial,sans-serif;font-size:18px;line-height:25px;text-align:center;color:#000000;font-weight:bold;max-width:30px;margin:0px 3px"
+                                                                                                    >
+                                                                                                </a>
+                                                                                            </td>
+                                                                                            {% endif %}
+
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+
+
+                                                                        </tr>
+
+
+                                                                        <tr>
+                                                                            <td align="center"
+                                                                                style="padding:15px;font-size:12px;color:#6c757d">
+                                                                                <a href="{{ main_url }}"
+                                                                                    style="text-decoration:none;display:inline-block"
+                                                                                    target="_blank"
+                                                                                >
+                                                                                    <p style="margin:0">&copy; {{ year }} {{ company_rights }}</p>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

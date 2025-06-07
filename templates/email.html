@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rendered Email</title>
+  <style>
+    /* simple styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #333;
+    }
+    h1 {
+      color: #007ACC;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    li strong {
+      display: inline-block;
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <h1>New Email Content</h1>
+  <p>The following data was provided:</p>
+  <ul>
+    {% for key, value in data.items() %}
+      <li>
+        <strong>{{ key|capitalize }}:</strong>
+        {{ value }}
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
