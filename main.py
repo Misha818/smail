@@ -143,8 +143,8 @@ def mailerSend_html(data: dict, html: str):
     # 4) Build the JSON payload exactly as MailerSend expects
     payload = {
         "from": {
-            "email": "MS_6dIh4e@mammysbread.am",  # must be verified sender
-            "name": "info@mammysbread.am"
+            "email": os.getenv("MAILERSEND_EMAIL"), 
+            "name": os.getenv("MY_EMAIL") 
         },
         "to": [
             {
@@ -158,7 +158,7 @@ def mailerSend_html(data: dict, html: str):
     }
 
     # 5) Send the POST request
-    url = "https://api.mailersend.com/v1/email"
+    url = os.getenv("MAILERSEND_API_URL") 
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json"
