@@ -32,15 +32,15 @@ def hyphen_filter(s: str) -> str:
 templates.env.filters["hyphen"] = hyphen_filter
 
 
-@app.get("/")
-def index(request: Request):
-    return "Welcome to the Email Service API! Use the /test endpoint to test email templates."
+# @app.get("/")
+# def index(request: Request):
+#     return "Welcome to the Email Service API! Use the /test endpoint to test email templates."
 
 
-@app.post("/test")
-async def test(request: Request):
-    data = await request.json() 
-    return email_constructor_html(request, data)
+# @app.post("/test")
+# async def test(request: Request):
+#     data = await request.json() 
+#     return email_constructor_html(request, data)
 
 
 @app.post("/send")
