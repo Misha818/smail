@@ -4,7 +4,7 @@ import smtplib
 import requests
 import mailersend
 from mailersend import emails
-from pathlib import Path
+# from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
