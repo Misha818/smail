@@ -5,7 +5,7 @@ import requests
 import mailersend
 from mailersend import emails
 # from pathlib import Path
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Header, HTTPException, Depends
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -31,19 +31,26 @@ def hyphen_filter(s: str) -> str:
 # Register the filter on the Jinja2 environment:
 templates.env.filters["hyphen"] = hyphen_filter
 
+API_KEY=os.getenv("API_KEY")
+API_KEY_NAME = os.getenv("API_KEY_NAME")
+
+def require_api_key(api_key: str = Header(..., alias=API_KEY_NAME)):
+    if api_key != API_KEY:
+        raise HTTPException(status_code=403, detail="Forbidden")
+
 
 # @app.get("/")
 # def index(request: Request):
 #     return "Welcome to the Email Service API! Use the /test endpoint to test email templates."
 
 
-# @app.post("/test")
-# async def test(request: Request):
-#     data = await request.json() 
-#     return email_constructor_html(request, data)
+@app.post("/test", dependencies=[Depends(require_api_key)])
+async def test(request: Request):
+    data = await request.json() 
+    return email_constructor_html(request, data)
 
 
-@app.post("/send")
+@app.post("/send", dependencies=[Depends(require_api_key)])
 async def send(request: Request):
     email_status = ''
     data = await request.json() 
