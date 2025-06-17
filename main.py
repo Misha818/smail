@@ -44,10 +44,15 @@ def require_api_key(api_key: str = Header(..., alias=API_KEY_NAME)):
 #     return "Welcome to the Email Service API! Use the /test endpoint to test email templates."
 
 
-@app.post("/test", dependencies=[Depends(require_api_key)])
-async def test(request: Request):
-    data = await request.json() 
-    return email_constructor_html(request, data)
+# @app.post("/test")
+# def test(request: Request):
+#     return "Hello, Beach!"
+
+
+# @app.post("/test", dependencies=[Depends(require_api_key)])
+# async def test(request: Request):
+#     data = await request.json() 
+#     return email_constructor_html(request, data)
 
 
 @app.post("/send", dependencies=[Depends(require_api_key)])
